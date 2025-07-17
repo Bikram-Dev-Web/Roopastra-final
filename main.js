@@ -8,7 +8,7 @@ import{initHeroSection}from './hero.js';import{initAboutSection}from './about.js
         z-index: 9999;
         transition: transform 0.1s ease, background 0.2s ease;
         transform: translate(-50%, -50%);
-    `;document.body.appendChild(cursor);document.addEventListener("mousemove",(e)=>{cursor.style.left=e.clientX+"px";cursor.style.top=e.clientY+"px"});const hoverElements=document.querySelectorAll("button, a, [data-interactive]");hoverElements.forEach((element)=>{element.addEventListener("mouseenter",()=>{cursor.style.transform="translate(-50%, -50%) scale(2)";cursor.style.background="radial-gradient(circle, rgba(168, 85, 247, 0.5), transparent)"});element.addEventListener("mouseleave",()=>{cursor.style.transform="translate(-50%, -50%) scale(1)";cursor.style.background="radial-gradient(circle, rgba(168, 85, 247, 0.3), transparent)"})});const progressBar=document.createElement('div');progressBar.style.cssText=`
+    `;const progressBar=document.createElement('div');progressBar.style.cssText=`
         position: fixed;
         top: 0;
         left: 0;
