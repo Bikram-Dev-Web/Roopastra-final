@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <!-- Background Elements -->
+    <div class="hero-background">
+      <div class="bg-overlay"></div>
+      <div class="floating-particles">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+        <div class="particle particle-6"></div>
+      </div>
+      <div class="floating-elements">
+        <div class="float-element float-1"></div>
+        <div class="float-element float-2"></div>
+        <div class="float-element float-3"></div>
+        <div class="float-element float-4"></div>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <span class="brand-text">Roopastra</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Desktop CTA and Mobile Toggle Container -->
+        <div class="nav-actions">
+          <button class="nav-cta">Try Now</button>
+          <button class="mobile-menu-toggle" onclick="showSidebar()">
+            <!-- Hamburger Icon SVG -->
+            <svg
+              width="25px"
+              height="19px"
+              viewBox="0 0 25 19"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                fill="none"
+                stroke="#3b82f6"
+                stroke-width="3"
+                stroke-linecap="round"
+              >
+                <line x1="1.5" y1="1.5" x2="23.5" y2="1.5"></line>
+                <line x1="1.5" y1="9.5" x2="23.5" y2="9.5"></line>
+                <line x1="1.5" y1="17.5" x2="23.5" y2="17.5"></line>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar for Mobile -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <button class="sidebar-close-btn" onclick="hideSidebar()">
+          <!-- Close Icon SVG -->
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              stroke="#FFFFFF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6L6 18"></path>
+              <path d="M6 6L18 18"></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+      <ul class="sidebar-list">
+        <li>
+          <a href="#hero" class="nav-link active" onclick="hideSidebar()"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="#features" class="nav-link" onclick="hideSidebar()"
+            >Features</a
+          >
+        </li>
+        <li>
+          <a href="#how-it-works" class="nav-link" onclick="hideSidebar()"
+            >How It Works</a
+          >
+        </li>
+        <li>
+          <a href="#about" class="nav-link" onclick="hideSidebar()">About</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-link" onclick="hideSidebar()"
+            >Contact</a
+          >
+        </li>
+        <li><button class="nav-cta">Try Now</button></li>
+      </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="glow-badge-wrapper">
+            <div class="glow-badge">
+              <span class="badge-icon">✨</span>
+              <span class="badge-text">ROOPASTRA</span>
+              <div class="badge-glow"></div>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line">Try before you buy,</span>
+            <span class="title-line gradient-text">virtually.</span>
+          </h1>
+
+          <div class="hero-subtitle">
+            <p class="subtitle-line">Experience Fashion Like Never Before —</p>
+            <p class="subtitle-line">
+              Instantly Try On Outfits with AI-Powered Styling.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <button class="get-started-btn">
+              <span class="btn-text">Get Started</span>
+              <span class="btn-icon">→</span>
+              <div class="btn-glow"></div>
+            </button>
+
+            <button class="watch-demo-btn">
+              <span class="play-icon">▶</span>
+              <span>Watch Demo</span>
+            </button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">97%</div>
+              <div class="stat-label">Accuracy</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Support</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="scroll-text">Scroll to explore</div>
+        <div class="scroll-arrow">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M7 13l3 3 7-7" />
+            <path d="M7 6l3 3 7-7" />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- feature section -->
+    <section class="features-features-section" id="features">
+      <div class="features-features-background">
+        <div class="features-bg-overlay"></div>
+        <div class="floating-elements">
+          <div class="features-float-element float-1"></div>
+          <div class="features-float-element float-2"></div>
+          <div class="features-float-element float-3"></div>
+          <div class="features-float-element float-4"></div>
+        </div>
+      </div>
+
+      <div class="features-features-container">
+        <div class="features-section-header">
+          <div class="features-subtitle-wrapper">
+            <span class="features-features-subtitle"
+              >Revolutionary Technology</span
+            >
+          </div>
+          <h2 class="features-features-title">
+            <span class="features-title-line">Why Choose</span>
+            <span class="features-title-line features-gradient-text"
+              >Roopastra?</span
+            >
+          </h2>
+          <div class="features-title-decoration"></div>
+        </div>
+
+        <div class="features-features-grid">
+          <div class="features-feature-card" data-feature="1">
+            <div class="features-card-background">
+              <div class="features-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Modern Retail Store"
+                  class="features-card-image"
+                />
+                <div class="features-image-overlay"></div>
+              </div>
+            </div>
+            <div class="features-card-content">
+              <div class="features-feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 2L2 7v10c0 5.55 3.84 10 9 10s9-4.45 9-10V7L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3>Virtual Try-on with Realistic Fitting</h3>
+              <p>
+                Experience cutting-edge AR technology that lets you see how
+                clothes fit and look on you with unprecedented accuracy. Our
+                advanced algorithms ensure perfect size matching.
+              </p>
+              <div class="features-card-glow"></div>
+            </div>
+          </div>
+
+          <div class="features-feature-card" data-feature="2">
+            <div class="features-card-background">
+              <div class="features-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Fashion Collection"
+                  class="features-card-image"
+                />
+                <div class="features-image-overlay"></div>
+              </div>
+            </div>
+            <div class="features-card-content">
+              <div class="features-feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"
+                  />
+                </svg>
+              </div>
+              <h3>AI-Powered Outfit Recommendations</h3>
+              <p>
+                Get personalized style suggestions tailored to your unique
+                preferences, body type, and lifestyle. Our AI learns your style
+                and suggests perfect matches.
+              </p>
+              <div class="features-card-glow"></div>
+            </div>
+          </div>
+
+          <div class="features-feature-card" data-feature="3">
+            <div class="features-card-background">
+              <div class="features-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Virtual Mirror Technology"
+                  class="features-card-image"
+                />
+                <div class="features-image-overlay"></div>
+              </div>
+            </div>
+            <div class="features-card-content">
+              <div class="features-feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <h3>Instant Style Previews</h3>
+              <p>
+                Quickly visualize different outfits and accessories in
+                real-time. Mix and match items from thousands of brands to
+                create your perfect look.
+              </p>
+              <div class="features-card-glow"></div>
+            </div>
+          </div>
+
+          <div class="features-feature-card" data-feature="4">
+            <div class="features-card-background">
+              <div class="features-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Fashion Retail Experience"
+                  class="features-card-image"
+                />
+                <div class="features-image-overlay"></div>
+              </div>
+            </div>
+            <div class="features-card-content">
+              <div class="features-feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <h3>Cross-Platform Compatibility</h3>
+              <p>
+                Access your virtual stylist anytime, anywhere. Our platform
+                works seamlessly across all devices - desktop, tablet, and
+                mobile.
+              </p>
+              <div class="features-card-glow"></div>
+            </div>
+          </div>
+
+          <div class="features-feature-card" data-feature="5">
+            <div class="features-card-background">
+              <div class="features-card-image-wrapper">
+                <img
+                  src="card-img.jpg"
+                  alt="Social Shopping"
+                  class="features-card-image"
+                />
+                <div class="features-image-overlay"></div>
+              </div>
+            </div>
+            <div class="features-card-content">
+              <div class="features-feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <h3>Community Style Sharing</h3>
+              <p>
+                Share your favorite looks and get inspired by a vibrant fashion
+                community. Rate outfits, get feedback, and discover trending
+                styles.
+              </p>
+              <div class="features-card-glow"></div>
+            </div>
+          </div>
+
+          <div class="features-feature-card" data-feature="6">
+            <div class="features-card-background">
+              <div class="features-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Premium Shopping Experience"
+                  class="features-card-image"
+                />
+                <div class="features-image-overlay"></div>
+              </div>
+            </div>
+            <div class="features-card-content">
+              <div class="features-feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M9 12l2 2 4-4" />
+                  <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3" />
+                  <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3" />
+                  <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3" />
+                  <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3" />
+                </svg>
+              </div>
+              <h3>Premium Quality Assurance</h3>
+              <p>
+                Every item is carefully curated and quality-checked. We partner
+                with premium brands to ensure you get the best fashion
+                experience.
+              </p>
+              <div class="features-card-glow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-features-stats">
+        <div class="features-stats-container">
+          <div class="features-stat-item">
+            <div class="features-stat-number" data-target="500000">0</div>
+            <div class="features-stat-label">Happy Users</div>
+          </div>
+          <div class="features-stat-item">
+            <div class="features-stat-number" data-target="10000">0</div>
+            <div class="features-stat-label">Fashion Items</div>
+          </div>
+          <div class="features-stat-item">
+            <div class="features-stat-number" data-target="99">0</div>
+            <div class="features-stat-label">% Accuracy</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- how it works -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="how-it-works-how-background">
+        <div class="how-it-works-bg-overlay"></div>
+        <div class="how-it-works-floating-elements">
+          <div class="how-it-works-float-element float-1"></div>
+          <div class="how-it-works-float-element float-2"></div>
+          <div class="how-it-works-float-element float-3"></div>
+          <div class="how-it-works-float-element float-4"></div>
+        </div>
+      </div>
+
+      <div class="how-it-works-how-container">
+        <div class="how-it-works-section-header">
+          <div class="how-it-works-subtitle-wrapper">
+            <span class="how-it-works-how-subtitle">HOW IT WORKS</span>
+          </div>
+          <h2 class="how-it-works-how-title">
+            <span class="how-it-works-title-line">Try your outfit in</span>
+            <span class="how-it-works-title-line how-it-works-gradient-text"
+              >four simple steps</span
+            >
+          </h2>
+          <div class="how-it-works-title-decoration"></div>
+        </div>
+
+        <div class="how-it-works-slider-container">
+          <div class="how-it-works-steps-wrapper">
+            <div class="how-it-works-step-card" data-step="1">
+              <div class="how-it-works-card-glow"></div>
+              <div class="how-it-works-card-content">
+                <div class="how-it-works-step-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+                    alt="Upload Photo"
+                  />
+                  <div class="how-it-works-image-overlay"></div>
+                </div>
+                <div class="how-it-works-step-info">
+                  <div class="how-it-works-step-number">01</div>
+                  <h4 class="how-it-works-step-title">Upload Your Photo</h4>
+                  <p class="how-it-works-step-description">
+                    Take or upload a clear photo to begin your virtual try-on
+                    experience with AI-powered precision.
+                  </p>
+                </div>
+              </div>
+              <div class="how-it-works-card-border"></div>
+            </div>
+
+            <div class="how-it-works-step-card" data-step="2">
+              <div class="how-it-works-card-glow"></div>
+              <div class="how-it-works-card-content">
+                <div class="how-it-works-step-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+                    alt="Choose Outfit"
+                  />
+                  <div class="how-it-works-image-overlay"></div>
+                </div>
+                <div class="how-it-works-step-info">
+                  <div class="how-it-works-step-number">02</div>
+                  <h4 class="how-it-works-step-title">Choose Outfit</h4>
+                  <p class="how-it-works-step-description">
+                    Pick from a curated collection of dresses, sarees, suits, or
+                    lehengas from premium brands.
+                  </p>
+                </div>
+              </div>
+              <div class="how-it-works-card-border"></div>
+            </div>
+
+            <div class="how-it-works-step-card" data-step="3">
+              <div class="how-it-works-card-glow"></div>
+              <div class="how-it-works-card-content">
+                <div class="how-it-works-step-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+                    alt="Try It On"
+                  />
+                  <div class="how-it-works-image-overlay"></div>
+                </div>
+                <div class="how-it-works-step-info">
+                  <div class="how-it-works-step-number">03</div>
+                  <h4 class="how-it-works-step-title">Try It On Virtually</h4>
+                  <p class="how-it-works-step-description">
+                    See the outfit on your body instantly using cutting-edge
+                    AI-powered fitting technology.
+                  </p>
+                </div>
+              </div>
+              <div class="how-it-works-card-border"></div>
+            </div>
+
+            <div class="how-it-works-step-card" data-step="4">
+              <div class="how-it-works-card-glow"></div>
+              <div class="how-it-works-card-content">
+                <div class="how-it-works-step-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+                    alt="Buy with Confidence"
+                  />
+                  <div class="how-it-works-image-overlay"></div>
+                </div>
+                <div class="how-it-works-step-info">
+                  <div class="how-it-works-step-number">04</div>
+                  <h4 class="how-it-works-step-title">Buy with Confidence</h4>
+                  <p class="how-it-works-step-description">
+                    Checkout only what looks great on you. No guesswork, no
+                    regrets, guaranteed satisfaction.
+                  </p>
+                </div>
+              </div>
+              <div class="how-it-works-card-border"></div>
+            </div>
+          </div>
+          <div class="how-it-works-navigation-arrows">
+            <button class="arrow prev-arrow" aria-label="Previous Step">
+              ‹
+            </button>
+            <button class="arrow next-arrow" aria-label="Next Step">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about -->
+    <section class="about-section" id="about">
+      <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+
+      <div class="container">
+        <div class="section-header">
+          <div class="title-container">
+            <h2 class="section-title">
+              <span class="title-word" data-text="About">About</span>
+              <span class="title-word gradient-text" data-text="Our">Our</span>
+              <span class="title-word" data-text="Vision">Vision</span>
+            </h2>
+            <div class="title-underline"></div>
+          </div>
+          <p class="section-subtitle">
+            Revolutionizing the way you experience products before purchase
+          </p>
+        </div>
+
+        <div class="content-grid">
+          <div class="story-card glass-card">
+            <div class="card-header">
+              <div class="icon-container">
+                <div class="icon-circle">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 2L2 7v10c0 5.55 3.84 10 9 10 1.85 0 3.55-.43 5-1.18C18.46 25.57 20.15 26 22 26c5.16 0 9-4.45 9-10V7L12 2z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="card-title">Our Story</h3>
+            </div>
+            <p class="card-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <div class="card-gradient"></div>
+          </div>
+
+          <div class="mission-card glass-card">
+            <div class="card-header">
+              <div class="icon-container">
+                <div class="icon-circle">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="card-title">Our Mission</h3>
+            </div>
+            <p class="card-content">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+              unde omnis iste natus error sit voluptatem accusantium doloremque
+              laudantium, totam rem aperiam.
+            </p>
+            <div class="card-gradient"></div>
+          </div>
+
+          <div class="innovation-card glass-card">
+            <div class="card-header">
+              <div class="icon-container">
+                <div class="icon-circle">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="card-title">Innovation</h3>
+            </div>
+            <p class="card-content">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident.
+            </p>
+            <div class="card-gradient"></div>
+          </div>
+        </div>
+
+        <div class="stats-section">
+          <div class="stats-container">
+            <div class="stat-item">
+              <div class="stat-number" data-target="50000">0</div>
+              <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="200">0</div>
+              <div class="stat-label">Partner Brands</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="1000000">0</div>
+              <div class="stat-label">Virtual Try-Ons</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="98">0</div>
+              <div class="stat-label">% Accuracy Rate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-showcase">
+          <h3 class="showcase-title">Meet the Visionaries</h3>
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="member-avatar">
+                <div class="avatar-placeholder">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </div>
+              </div>
+              <h4 class="member-name">John Doe</h4>
+              <p class="member-role">CEO & Founder</p>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">
+                <div class="avatar-placeholder">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </div>
+              </div>
+              <h4 class="member-name">Jane Smith</h4>
+              <p class="member-role">CTO</p>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">
+                <div class="avatar-placeholder">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </div>
+              </div>
+              <h4 class="member-name">Mike Johnson</h4>
+              <p class="member-role">Head of Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <section class="contact-contact-section" id="contact">
+      <div class="contact-contact-background">
+        <div class="contact-bg-overlay"></div>
+        <div class="contact-floating-elements">
+          <div class="contact-float-element contact-float-1"></div>
+          <div class="contact-float-element contact-float-2"></div>
+          <div class="contact-float-element contact-float-3"></div>
+          <div class="contact-float-element contact-float-4"></div>
+        </div>
+      </div>
+
+      <div class="contact-contact-container">
+        <div class="contact-section-header">
+          <div class="contact-subtitle-wrapper">
+            <span class="contact-contact-subtitle">Stay Connected</span>
+          </div>
+          <h2 class="contact-contact-title">
+            <span class="contact-title-line">Stay in the</span>
+            <span class="contact-title-line contact-gradient-text">Loop</span>
+          </h2>
+          <div class="contact-title-decoration"></div>
+          <p class="contact-contact-description">
+            Get early access updates and product announcements delivered to your
+            inbox.
+          </p>
+        </div>
+
+        <div class="contact-contact-form-wrapper">
+          <form class="contact-contact-form" id="contactForm">
+            <div class="contact-form-group">
+              <div class="contact-input-wrapper">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email address"
+                  required
+                />
+                <div class="contact-input-glow"></div>
+                <div class="contact-input-border"></div>
+              </div>
+              <button type="submit" class="contact-submit-btn">
+                <span class="contact-btn-text">Notify Me</span>
+                <div class="contact-btn-glow"></div>
+                <div class="contact-btn-ripple"></div>
+              </button>
+            </div>
+            <div class="contact-form-status" id="formStatus"></div>
+          </form>
+        </div>
+
+        <div class="contact-contact-divider">
+          <div class="contact-divider-line"></div>
+          <span class="contact-divider-text">Or</span>
+          <div class="contact-divider-line"></div>
+        </div>
+
+        <div class="contact-contact-info">
+          <p class="contact-contact-label">Reach us directly at:</p>
+          <a href="mailto:info@roopastra.com" class="contact-email-link">
+            <div class="contact-email-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <span>info@roopastra.com</span>
+            <div class="contact-link-underline"></div>
+          </a>
+        </div>
+
+        <div class="contact-social-proof">
+          <div class="contact-proof-stats">
+            <div class="contact-stat-item">
+              <div class="contact-stat-number" data-count="1000">0</div>
+              <div class="contact-stat-label">Early Adopters</div>
+            </div>
+            <div class="contact-stat-item">
+              <div class="contact-stat-number" data-count="24">0</div>
+              <div class="contact-stat-label">Hour Response</div>
+            </div>
+            <div class="contact-stat-item">
+              <div class="contact-stat-number" data-count="100">0</div>
+              <div class="contact-stat-label">Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 Roopastra. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://github.com/your-github" target="_blank">GitHub</a>
+          <span>|</span>
+          <a href="#">Credits</a>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js" type="module" defer></script>
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const mobileMenuButton = document.querySelector(".mobile-menu-toggle");
+      const closeSidebarButton = document.querySelector(".sidebar-close-btn");
+      const sidebarLinks = document.querySelectorAll(".sidebar .nav-link");
+
+      function showSidebar() {
+        sidebar.classList.add("active");
+      }
+
+      function hideSidebar() {
+        sidebar.classList.remove("active");
+      }
+
+      // Attach event listeners
+      if (mobileMenuButton) {
+        mobileMenuButton.addEventListener("click", showSidebar);
+      }
+      if (closeSidebarButton) {
+        closeSidebarButton.addEventListener("click", hideSidebar);
+      }
+    </script>
+  </body>
+</html>
